@@ -24,4 +24,14 @@ Categories=Network;Utility;" > $DESKTOP_FILE
 
 chmod +x $DESKTOP_FILE
 
+if command -v kbuildsycoca6 &> /dev/null; then
+
+    kbuildsycoca6 --noincremental
+
+elif command -v update-desktop-database &> /dev/null; then
+
+    update-desktop-database ~/.local/share/applications
+
+fi
+
 echo "✅ Installation complete! You can now find 'YDM' in your Application Menu."
