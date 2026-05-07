@@ -17,7 +17,7 @@ echo "[Desktop Entry]
 Name=YDM
 Comment=YouTube Download Manager
 Exec=$APP_PATH/venv/bin/python $APP_PATH/main.py
-Icon=$APP_PATH/icon.png
+Icon=$APP_PATH/icon_1.png
 Terminal=false
 Type=Application
 Categories=Network;Utility;" > $DESKTOP_FILE
