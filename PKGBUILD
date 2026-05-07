@@ -6,7 +6,7 @@ pkgdesc="YouTube Download Manager by Lenvora"
 arch=('any')
 url="https://github.com/lenvora/YDM"
 license=('MIT')
-depends=('python-pyside6' 'python-yt-dlp')
+depends=('pyside6' 'yt-dlp')
 source=("git+https://github.com/lenvora/YDM.git")
 md5sums=('SKIP')
 
