@@ -18,11 +18,11 @@ package() {
   mkdir -p "$pkgdir/usr/share/ydm"
   mkdir -p "$pkgdir/usr/share/pixmaps"
   
-  # Kodları ve ikonu kopyala (venv hariç her şeyi)
+  # Dosyaları kopyala (icon_2.png olduğuna dikkat!)
   cp main.py "$pkgdir/usr/share/ydm/"
-  cp icon.png "$pkgdir/usr/share/pixmaps/ydm.png"
+  cp icon_2.png "$pkgdir/usr/share/pixmaps/ydm.png"
   
-  # Çalıştırma scriptini düzelt (Sistem python'ını kullanacak şekilde)
+  # Çalıştırma scriptini oluştur (Sanal ortamı değil, sistem python'ını kullanır)
   echo -e "#!/bin/bash\npython /usr/share/ydm/main.py \"\$@\"" > "$pkgdir/usr/bin/ydm"
   chmod +x "$pkgdir/usr/bin/ydm"
 }
