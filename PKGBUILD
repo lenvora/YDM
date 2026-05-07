@@ -1,7 +1,7 @@
 # Maintainer: Lenvora
 pkgname=ydm-git
 pkgver=1.0.0
-pkgrel=3
+pkgrel=1
 pkgdesc="YouTube Download Manager by Lenvora"
 arch=('any')
 url="https://github.com/lenvora/YDM"
@@ -23,10 +23,10 @@ package() {
   cp main.py "$pkgdir/usr/share/ydm/"
   cp icon_2.png "$pkgdir/usr/share/pixmaps/ydm.png"
   
-  # Çalıştırma scriptini oluştur
+  # Çalıştırma scriptini oluştur (Sistem python'ı ile çalışması için en temizi budur)
   echo -e "#!/bin/bash\npython /usr/share/ydm/main.py \"\$@\"" > "$pkgdir/usr/bin/ydm"
   chmod +x "$pkgdir/usr/bin/ydm"
 
-  # .desktop dosyasını oluştur (Menüde görünmesi için)
+  # .desktop dosyasını oluştur (Menüde logonun görünmesi için şart!)
   echo -e "[Desktop Entry]\nName=YDM\nComment=YouTube Download Manager\nExec=/usr/bin/ydm\nIcon=ydm\nTerminal=false\nType=Application\nCategories=Network;Video;" > "$pkgdir/usr/share/applications/ydm.desktop"
 }
