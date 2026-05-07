@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YDM
+Comment=YouTube Download Manager by Lenvora
+Exec=ydm-launcher
+Icon=video-display
+Terminal=false
+Categories=Network;Video;
